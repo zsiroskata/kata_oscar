@@ -11,7 +11,8 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="80"/>
 
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="143*"/>
+            <RowDefinition Height="34*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="215"/>
@@ -21,7 +22,24 @@
 
         <!-- Label az első cellában  -->
         <Label Grid.Row="0" Grid.Column="0" Content="Oscar-díjas filmek" VerticalContentAlignment="Bottom"/>
-        <ListBox x:Name="FilmListbox" HorizontalAlignment="Center" Height="312" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165"/>
+        <ListBox x:Name="FilmListbox" HorizontalAlignment="Center" Height="312" Margin="0,10,0,0" Grid.Row="1" VerticalAlignment="Top" Width="165" Grid.RowSpan="2"/>
+        <TextBox x:Name="szo" Grid.Column="2" HorizontalAlignment="Center" Height="30" Margin="0,40,0,0" TextWrapping="Wrap" Text="Keresett szó" VerticalAlignment="Top" Width="195" GotFocus="TextBox_GotFocus"/>
+        <Button x:Name="listazBtn" Grid.Column="2" Content="Listázz" HorizontalAlignment="Left" Height="26" Margin="33,10,0,0" Grid.Row="2" VerticalAlignment="Top" Width="153"/>
+        <ListBox x:Name="lista2" Grid.Column="2" HorizontalAlignment="Left" Height="266" Margin="33,0,0,0" Grid.Row="1" VerticalAlignment="Center" Width="153" />
+        <Label Grid.Column="1" Content="Találat kiírása" HorizontalAlignment="Left" Height="35" Margin="21,285,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118" Grid.RowSpan="2"/>
+        <TextBox x:Name="kfilm" Grid.Column="1" HorizontalAlignment="Left" Height="29" Margin="21,240,0,0" Grid.Row="1" TextWrapping="Wrap" Text="Keresett film" VerticalAlignment="Top" Width="164" GotFocus="keresFilm"/>
+        <Button x:Name="filmKeres" Grid.Column="1" Content="Keres" HorizontalAlignment="Left" Height="36" Margin="250,240,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110"/>
+        <Label x:Name="cim" Grid.Column="1" Content="cim" HorizontalAlignment="Left" Height="23" Margin="21,194,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118"/>
+        <Button x:Name="legjobb" Grid.Column="1" Content="Legjobb díjat kapta" HorizontalAlignment="Left" Height="36" Margin="250,189,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110"/>
+        <Button x:Name="ujFilm" Grid.Column="1" Content="Új film felvétele" HorizontalAlignment="Left" Height="24" Margin="21,149,0,0" Grid.Row="1" VerticalAlignment="Top" Width="316"/>
+        <Label Grid.Column="1" Content="Dijak száma" HorizontalAlignment="Left" Height="29" Margin="21,108,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86"/>
+        <Label Grid.Column="1" Content="Jelölések száma" HorizontalAlignment="Left" Height="29" Margin="21,74,0,0" Grid.Row="1" VerticalAlignment="Top" Width="111"/>
+        <Label Grid.Column="1" Content="Év" HorizontalAlignment="Left" Height="29" Margin="21,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86"/>
+        <Label Grid.Column="1" Content="Cím" HorizontalAlignment="Left" Height="29" Margin="21,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86"/>
+        <TextBox x:Name="cimTxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="evtxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,44,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="jeloltTxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,78,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="dijakSzamaTxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,108,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
     </Grid>
 
 </Window>

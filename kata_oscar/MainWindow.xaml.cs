@@ -19,6 +19,22 @@ namespace kata_oscar
         public MainWindow()
         {
             InitializeComponent();
+
+
+        }
+
+        private void TextBox_GotFocus(object sender, RoutedEventArgs e)
+        {
+            // Kiüríti a TextBox tartalmát
+            szo.Text = "";
+            // Az eseménykód első futása után eltávolítja az eseménykezelőt
+            szo.GotFocus -= TextBox_GotFocus;
+        }
+
+        private void keresFilm(object sender, RoutedEventArgs e)
+        {
+            kfilm.Text = "";
+            kfilm.GotFocus -= TextBox_GotFocus;
         }
     }
 }
