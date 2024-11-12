@@ -31,13 +31,13 @@
         <Button x:Name="filmKeres" Grid.Column="1" Content="Keres" HorizontalAlignment="Left" Height="36" Margin="250,240,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110"/>
         <Label x:Name="cim" Grid.Column="1" Content="cim" HorizontalAlignment="Left" Height="23" Margin="21,194,0,0" Grid.Row="1" VerticalAlignment="Top" Width="118"/>
         <Button x:Name="legjobb" Grid.Column="1" Content="Legjobb díjat kapta" HorizontalAlignment="Left" Height="36" Margin="250,189,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110"/>
-        <Button x:Name="ujFilm" Grid.Column="1" Content="Új film felvétele" HorizontalAlignment="Left" Height="24" Margin="21,149,0,0" Grid.Row="1" VerticalAlignment="Top" Width="316"/>
+        <Button x:Name="ujFilm" Grid.Column="1" Content="Új film felvétele" HorizontalAlignment="Left" Height="24" Margin="21,149,0,0" Grid.Row="1" VerticalAlignment="Top" Width="316" Click="ujFilm_Click"/>
         <Label Grid.Column="1" Content="Dijak száma" HorizontalAlignment="Left" Height="29" Margin="21,108,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86"/>
         <Label Grid.Column="1" Content="Jelölések száma" HorizontalAlignment="Left" Height="29" Margin="21,74,0,0" Grid.Row="1" VerticalAlignment="Top" Width="111"/>
         <Label Grid.Column="1" Content="Év" HorizontalAlignment="Left" Height="29" Margin="21,40,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86"/>
         <Label Grid.Column="1" Content="Cím" HorizontalAlignment="Left" Height="29" Margin="21,6,0,0" Grid.Row="1" VerticalAlignment="Top" Width="86"/>
         <TextBox x:Name="cimTxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,10,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
-        <TextBox x:Name="evtxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,44,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
+        <TextBox x:Name="evTxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,44,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
         <TextBox x:Name="jeloltTxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,78,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
         <TextBox x:Name="dijakSzamaTxt" Grid.Column="1" HorizontalAlignment="Left" Height="25" Margin="179,108,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="158"/>
     </Grid>

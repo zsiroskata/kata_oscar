@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.IO;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -18,8 +19,27 @@ namespace kata_oscar
     {
         public MainWindow()
         {
+            List<Oscar> oscarok = new();
             InitializeComponent();
 
+            using StreamReader sr = new StreamReader(
+                path: @"..\..\..\src\oscar.csv",
+                encoding: Encoding.UTF8
+                );
+
+            sr.ReadLine();
+            while (!sr.EndOfStream)
+            {
+                oscarok.Add(new Oscar(sr.ReadLine()));
+            }
+
+            sr.Close();
+
+            
+            foreach (var item in oscarok)
+            {
+                FilmListbox.Items.Add(item.Cim);
+            }
 
         }
 
@@ -35,6 +55,21 @@ namespace kata_oscar
         {
             kfilm.Text = "";
             kfilm.GotFocus -= TextBox_GotFocus;
+        }
+
+        private void ujFilm_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (cimTxt.Text != "" || evTxt.Text != "" || jeloltTxt.Text != "" || dijakSzamaTxt.Text != "")
+            {
+                using StreamWriter sw = new StreamWriter(
+                    path: @"..\..\..\src\oscar.csv");
+
+            }
+            else
+            {
+                MessageBox.Show("Valamelyik textbox üres!");
+            }
         }
     }
 }
